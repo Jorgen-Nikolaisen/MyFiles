@@ -6,6 +6,7 @@ import { Home } from './Pages/Home';
 import { Projects } from './Pages/Projects';
 import {Coaching} from "./Pages/Coaching";
 import { About } from './Pages/About';
+import { CatFacts } from './Pages/Projects_subpages/Catfatcs';
 
 
 
@@ -15,7 +16,10 @@ root.render(
   <Router>
     <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/Projects" element={<Projects/>}/>
+      <Route path="/Projects" element={<Projects/>}>
+        
+      </Route>
+      <Route path="/CatFacts" element={<CatFacts/>}/>
       <Route path="/Coaching" element={<Coaching/>}/>
       <Route path="/About" element={<About/>}/>
     </Routes>
