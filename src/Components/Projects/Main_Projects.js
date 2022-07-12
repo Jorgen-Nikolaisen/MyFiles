@@ -18,7 +18,7 @@ export function MainProjects() {
   return (
     <Content>
         <StyledLinkProject to={"/CatFacts"} style={{backgroundImage: `url(${CoolCat})`}}>To CatFacts</StyledLinkProject>
-        <StyledLinkProject to={"/CatFacts"} style={{backgroundImage: `url(${CoolCat})`}}>To CatFacts</StyledLinkProject>
+        <StyledLinkProject to={"/WeatherAPI"} style={{backgroundImage: `url(${CoolCat})`}}>To CatFacts</StyledLinkProject>
         <StyledLinkProject to={"/CatFacts"} style={{backgroundImage: `url(${CoolCat})`}}>To CatFacts</StyledLinkProject>
         <StyledLinkProject to={"/CatFacts"} style={{backgroundImage: `url(${CoolCat})`}}>To CatFacts</StyledLinkProject>
         <StyledLinkProject to={"/CatFacts"} style={{backgroundImage: `url(${CoolCat})`}}>To CatFacts</StyledLinkProject>
