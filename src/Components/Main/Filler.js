@@ -1,5 +1,23 @@
 import styled from "styled-components";
 
+const Holder = styled.article`
+margin-top: 5%;
+color: rgba(0,0,0,0.1);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 0.75rem;
+transition: all 0.7s ease-in-out;
+
+&:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    color: rgba(0,0,0,1);
+    
+}
+`
+
 const Title = styled.h1`
     margin-top: 20%;
     line-height: 55px;
@@ -14,16 +32,16 @@ const Text = styled.p`
 
 export const FillerText = () => {
     return(
-        <article>
+        <Holder>
             <Title>
-            Jørgen Nikolaisen
+            Cornerstone project
             </Title>
             <Text>
-            The hsla() function define colors using the Hue-saturation-lightness-alpha model (HSLA). <br></br>
-            HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity of the color. <br></br>
-            Hue value of its Hsl is 0, Saturation value is 0, Lightness value is 0.95686274509804 and alpha value is 1.
+            <p>This is my main project. Where I showcase an fake-store by using API's and Redux. <br></br>
+                
+            </p>
             </Text>
-        </article>
+        </Holder>
         
     )
 }

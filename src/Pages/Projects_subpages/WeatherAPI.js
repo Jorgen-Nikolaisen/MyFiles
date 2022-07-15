@@ -4,12 +4,11 @@ import React, {useState, useEffect} from 'react'
 import { TopBar } from "../../Components/TopBar";
 import { Footer } from "../../Components/Footer";
 import Weather from "./WeatherApp/Weather.jpg"
-import { eventWrapper } from "@testing-library/user-event/dist/utils";
+
 
 const WeatherArticle = styled.section`
 height: 70vh;
 width: 100%;
-background-color: rgba(224,242,227, 0.3);
 border-radius: 1rem;
 font-weight: bold;
 background-image: url(${Weather});
@@ -27,6 +26,7 @@ top: 10%;
 display: grid;
 grid-template-columns: repeat(12, 1fr);
 grid-template-rows: repeat(12, 1fr);
+
 `
 const Description = styled.article`
    
@@ -40,7 +40,7 @@ display: flex;
 flex-direction: column;
 `
 const Location = styled.article`
-
+font-size: 35px;
 `
 const Temp = styled.article`
 font-size: 35px;
@@ -83,8 +83,8 @@ export const WeatherData = () => {
     const [data,setData] = useState({})
     const [location, setLocation] = useState("")
 
-    //const apiKey = "8db9061c41b9c04132194de69ccd7c0f"
-    const url =`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=8db9061c41b9c04132194de69ccd7c0f`
+    const apiKEY = "Hidden"
+    const url =`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKEY}` 
 
     const searchLocation = (event) => {
         if(event.key === "Enter"){
@@ -92,9 +92,10 @@ export const WeatherData = () => {
                 setData(response.data)
                 console.log(response.data);
             })
+            setLocation("")
         }
     }
-
+  
     return(
          <>
          <TopBar></TopBar>
@@ -108,27 +109,27 @@ export const WeatherData = () => {
                 ></Search>
                 <Top>
                 <Location>
-                    <p>Oslo</p>
+                    <p>{data.name}</p>
                 </Location>
                 <Temp>
-                    <p>27 Celsius</p>
+                    <p>{data.main.temp}&deg;C</p>
                 </Temp>
                 <Description>
-                    <p>Sol</p>
+                    <p>{data.weather[0].main}</p>
                 </Description>
                 </Top>
                 
                 <Bottom>
                     <Feels>
-                        <h1>35 Celsius</h1>
+                        <h1>{data.main.feels_like}</h1>
                         <p>Feels like</p>
                     </Feels>
                     <Humidity>
-                        <h1>20%</h1>
+                        <h1>{data.main.humidity}%</h1>
                         <p>Humidity</p>
                     </Humidity>
                     <Wind>
-                        <h1>7 m/s</h1>
+                        <h1>{data.wind.speed}m/s</h1>
                         <p>Wind speed</p>
                     </Wind>
                 </Bottom>

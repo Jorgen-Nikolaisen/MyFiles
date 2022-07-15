@@ -5,7 +5,7 @@ import Book from "./Main_Files/Main_Images/Book.jpg"
 import Gaming from "./Main_Files/Main_Images/Gaming.jpg"
 import Alma from "./Main_Files/Main_Images/Alma.jpg"
 import { FillerText } from './Filler'
-
+import Store from "./Main_Files/Main_Images/Store.jpg"
 
 const Content = styled.main`
 height: 230vh;
@@ -23,6 +23,10 @@ background-position: center;
 background-size: cover;
 border-radius: 0.75rem;
 transition: all 0.6s ease-in-out;
+color: white;
+display: flex;
+justify-content: center;
+z-index: 2;
 &:hover{
     cursor: pointer;
     transform: scale(1.05);
@@ -31,19 +35,22 @@ transition: all 0.6s ease-in-out;
 const HeroText = styled.section`
 margin-top: 5%;
 margin-left: 5%;
+padding: 5% 5% 5% 5%;
 grid-column: 8 / 12;
 grid-row: 2 / 6;
 background-position: center;
 background-size: cover;
-text-align: center;
+opacity: 0.9;
 display: flex;
 flex-direction: column;
 align-items: center;
 border-radius: 0.75rem;
 transition: all 0.7s ease-in-out;
+background-color: white;
 &:hover{
     cursor: pointer;
     transform: scale(1.05);
+    opacity:1;
 }
 
 `
@@ -73,9 +80,11 @@ export function Main() {
   return (
     <Content>
         <Carousel/>
-        <HeroContent style={{backgroundImage: `url(${Alma})`}}/>
+        <HeroContent style={{backgroundImage: `url(${Store})`}}>
+            <h2>Redux store</h2>
+        </HeroContent>
 
-        <HeroText style={{backgroundImage: `url(${Book})`}}>
+        <HeroText>
             <FillerText/>
         </HeroText>
 

@@ -7,7 +7,7 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 const ImageRoller = styled.section`
 grid-column: 2 / 12;
 height: 60vh;
-margin-top: 10%;
+margin-top: 5%;
 `
 const InnerImages = styled.article`
 width: 100%;

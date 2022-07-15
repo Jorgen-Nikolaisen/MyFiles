@@ -8,6 +8,7 @@ import {Coaching} from "./Pages/Coaching";
 import { About } from './Pages/About';
 import { CatFacts } from './Pages/Projects_subpages/Catfatcs';
 import { WeatherData } from './Pages/Projects_subpages/WeatherAPI';
+import { MonsterRolodex } from './Pages/Projects_subpages/MonsterRolodex';
 
 
 
@@ -22,6 +23,7 @@ root.render(
       </Route>
       <Route path="/CatFacts" element={<CatFacts/>}/>
       <Route path="/WeatherAPI" element={<WeatherData/>}/>
+      <Route path="/MonsterRolodex" element={<MonsterRolodex/>}/>
       <Route path="/Coaching" element={<Coaching/>}/>
       <Route path="/About" element={<About/>}/>
     </Routes>
