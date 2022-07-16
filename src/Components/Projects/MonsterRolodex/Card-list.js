@@ -3,12 +3,13 @@ import { Component } from "react";
 import styled from "styled-components";
 
 const MonsterSection = styled.section`
-  width: 85vw;
-  height: 110vh;
+  width: 100vw;
+  max-height: 100vh;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4 ,1fr);
   grid-gap: 20px;
+  overflow: auto;
 `
 const MonsterCard = styled.article`
   display: flex;
@@ -18,6 +19,8 @@ const MonsterCard = styled.article`
   border-radius: 5px;
   padding: 25px;
   cursor: pointer;
+  margin-bottom: 10px;
+  
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   transform: translateZ(0);

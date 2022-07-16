@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const FilterHolder = styled.main`
-    height: 120vh;
+    min-height: 100vh;
+    max-height: 250vh;
+    width: 100%;
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,4 +17,12 @@ export const FilterHolder = styled.main`
     rgba(0, 128, 128, 1) 100%
   );
   text-align: center;
+`
+
+export const MonsterTitle = styled.h1`
+ margin-top: 0px;
+ margin-bottom: 50px;
+ font-size: 8rem;
+ color: #0ccac4;
+ font-family: Bigelow Rules;
 `

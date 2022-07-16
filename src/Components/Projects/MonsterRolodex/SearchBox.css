@@ -3,9 +3,10 @@
   border: none;
   outline: none;
   padding: 10px;
-  width: 150px;
-  height: 30px;
+  width: 15rem;
+  height: 3rem;
   line-height: 30px;
+  margin-top: 30px;
   margin-bottom: 30px;
+  border-radius: 1rem;
 }
-

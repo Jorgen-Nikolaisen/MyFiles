@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import styled from 'styled-components';
 import { Footer } from '../../Components/Footer';
 import CardList from '../../Components/Projects/MonsterRolodex/Card-list';
-import { FilterHolder } from '../../Components/Projects/MonsterRolodex/MainRolodex';
+import { FilterHolder, MonsterTitle } from '../../Components/Projects/MonsterRolodex/MainRolodex';
 import SearchBox from '../../Components/Projects/MonsterRolodex/SearchBox';
 import { TopBar } from '../../Components/TopBar';
 
@@ -41,8 +41,9 @@ class Monster extends Component{
          
         return(
             <>
-            <TopBar></TopBar>
+            <TopBar/>
              <FilterHolder>
+             <MonsterTitle>MonsterRolodex</MonsterTitle>
                <SearchBox className="SearchBox" onChangeHandler={onSearchChange} placeholder="Search names"></SearchBox>
                 <CardList monsters={filteredNames}></CardList>
             </FilterHolder>
