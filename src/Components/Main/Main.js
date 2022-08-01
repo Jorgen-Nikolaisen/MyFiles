@@ -6,6 +6,7 @@ import Gaming from "./Main_Files/Main_Images/Gaming.jpg"
 import Alma from "./Main_Files/Main_Images/Alma.jpg"
 import { FillerText } from './Filler'
 import Store from "./Main_Files/Main_Images/Store.jpg"
+import { Link } from 'react-router-dom'
 
 const Content = styled.main`
 height: 230vh;
@@ -15,7 +16,7 @@ grid-template-columns: repeat(12, 1fr);
 grid-template-rows: repeat(10, 1fr);
 background-color:#f4f4f4;
 `
-const HeroContent = styled.section`
+const HeroContent = styled.a`
 margin-top: 5%;
 grid-column: 2 / 8;
 grid-row: 2 / 6;
@@ -80,10 +81,11 @@ export function Main() {
   return (
     <Content>
         <Carousel/>
-        <HeroContent style={{backgroundImage: `url(${Store})`}}>
-            <h2>Redux store</h2>
+          <HeroContent target="_blank" href="https://master--resonant-tulumba-70246a.netlify.app" style={{backgroundImage: `url(${Store})`}}>
+                <h2>Redux store</h2>
         </HeroContent>
-
+       
+            
         <HeroText>
             <FillerText/>
         </HeroText>
@@ -95,6 +97,7 @@ export function Main() {
     </Content>
   )
 }
+//
 
 
 
